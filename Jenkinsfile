@@ -34,7 +34,7 @@ pipeline {
                 snPublishApp(
                     url: "https://chiarngqdemoauthor.service-now.com",
                     credentialsId: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
-                    appVersion: '4.3.10')
+                    appVersion: '4.3.11')
 
                 echo "ServiceNow Parameters after publishing stage: ${params.snParam}"
             }
@@ -45,7 +45,7 @@ pipeline {
                     url: "https://chiarngqdemoclient.service-now.com",
                     credentialsId: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
                     appScope: "x_fxi_afioristore2",
-                    appVersion: "4.3.10",
+                    appVersion: "4.3.11",
                     baseAppAutoUpgrade: false)
 
                 echo "ServiceNow Parameters after installation stage: ${params.snParam}"
