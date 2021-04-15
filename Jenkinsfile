@@ -8,12 +8,17 @@ pipeline {
             string(name: "myParam", defaultValue: 'test')
 
             snParam(
+                description: "ServiceNow Parameters",
                 credentialsForPublishedApp: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
                 instanceForPublishedAppUrl: "https://chiarngqdemoauthor.service-now.com",
                 credentialsForInstalledApp:"f15c53d0-25d0-41ab-adce-3f60e6bc9217",
                 instanceForInstalledAppUrl:"https://chiarngqdemoclient.service-now.com",
+                sysId:'',
                 appScope: "x_fxi_afioristore2",
-                publishedAppVersion: '4.3.10'
+                publishedAppVersion: '4.3.10',
+                rollbackAppVersion: '',
+                batchRollbackId: '',
+                progressCheckInterval: null
             )
     }
 
@@ -21,7 +26,7 @@ pipeline {
         stage('configuration') {
             steps {
                 echo "Test param: ${params.myParam}"
-                
+
                 echo "ServiceNow Parameters: ${params.snParam}"
             }
         }
