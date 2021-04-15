@@ -28,7 +28,7 @@ pipeline {
         stage('full-scan') {
             steps {
                 snInstanceScan(
-                    url: 'https://chiarngqdemoauthor.service-now.com'
+                    url: 'https://chiarngqdemoauthor.service-now.com',
                     credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217',
                     scanType: 'fullScan')
             }
@@ -36,7 +36,7 @@ pipeline {
         // stage('point-scan') {
         //     steps {
         //         snInstanceScan(
-        //             url: 'https://chiarngqdemoauthor.service-now.com'
+        //             url: 'https://chiarngqdemoauthor.service-now.com',
         //             credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217',
         //             scanType: 'pointScan',
         //             targetTable: 'incident',
@@ -46,7 +46,7 @@ pipeline {
         // stage('combo-scan') {
         //     steps {
         //         snInstanceScan(
-        //             url: 'https://chiarngqdemoauthor.service-now.com'
+        //             url: 'https://chiarngqdemoauthor.service-now.com',
         //             credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217',
         //             scanType: 'scanWithCombo',
         //             comboSysId: '12ff94c51b9fa050b54e85d5604bcbc6')
@@ -55,7 +55,7 @@ pipeline {
         // stage('suite-scan-scoped-apps') {
         //     steps {
         //         snInstanceScan(
-        //             url: 'https://chiarngqdemoauthor.service-now.com'
+        //             url: 'https://chiarngqdemoauthor.service-now.com',
         //             credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217',
         //             scanType: 'scanWithSuiteOnScopedApps',
         //             suiteSysId: 'fc8d84891b5fa050b54e85d5604bcb6f',
@@ -65,7 +65,7 @@ pipeline {
         // stage('suite-scan-update-sets') {
         //     steps {
         //         snInstanceScan(
-        //             url: 'https://chiarngqdemoauthor.service-now.com'
+        //             url: 'https://chiarngqdemoauthor.service-now.com',
         //             credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217',
         //             scanType: 'scanWithSuiteOnUpdateSets',
         //             suiteSysId: 'fc8d84891b5fa050b54e85d5604bcb6f',
