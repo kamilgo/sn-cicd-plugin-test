@@ -17,7 +17,6 @@ pipeline {
                 appScope: "x_fxi_afioristore2",
                 publishedAppVersion: '4.3.10',
                 rollbackAppVersion: '',
-                batchRollbackId: '',
                 progressCheckInterval: null
             )
     }
