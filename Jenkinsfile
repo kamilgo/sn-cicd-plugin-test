@@ -39,6 +39,8 @@ pipeline {
                     appScope: "x_fxi_afioristore2",
                     appVersion: "4.3.10",
                     baseAppAutoUpgrade: false)
+
+                echo "ServiceNow Parameters after installation stage: ${params.snParam}"
             }
         }
         stage('revert-changes') {
