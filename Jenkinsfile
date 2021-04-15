@@ -34,7 +34,7 @@ pipeline {
                 snPublishApp(
                     url: "https://chiarngqdemoauthor.service-now.com",
                     credentialsId: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
-                    appVersion: '4.3.11')
+                    obtainVersionAutomatically: true)
 
                 echo "ServiceNow Parameters after publishing stage: ${params.snParam}"
             }
