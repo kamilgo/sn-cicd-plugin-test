@@ -22,7 +22,7 @@ pipeline {
         // }
         stage('installation') {
             steps {
-                snInstallApp(baseAppVersion: '2.0.0', baseAppAutoUpgrade: false)
+                snInstallApp(baseAppAutoUpgrade: false)
             }
         }
         stage('revert-changes') {
