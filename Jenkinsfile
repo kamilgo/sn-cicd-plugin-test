@@ -3,16 +3,16 @@
 pipeline {
     agent any
 
-    parameters {
-            snParam(
-                credentialsForPublishedApp: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
-                instanceForPublishedAppUrl: "https://chiarngqdemoauthor.service-now.com",
-                credentialsForInstalledApp:"f15c53d0-25d0-41ab-adce-3f60e6bc9217",
-                instanceForInstalledAppUrl:"https://chiarngqdemoclient.service-now.com",
-                appScope: "x_fxi_afioristore2",
-                publishedAppVersion: '4.3.9'
-            )
-    }
+    // parameters {
+    //         snParam(
+    //             credentialsForPublishedApp: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
+    //             instanceForPublishedAppUrl: "https://chiarngqdemoauthor.service-now.com",
+    //             credentialsForInstalledApp:"f15c53d0-25d0-41ab-adce-3f60e6bc9217",
+    //             instanceForInstalledAppUrl:"https://chiarngqdemoclient.service-now.com",
+    //             appScope: "x_fxi_afioristore2",
+    //             publishedAppVersion: '4.3.9'
+    //         )
+    // }
 
     stages {
         // stage('publishing') {
@@ -22,12 +22,21 @@ pipeline {
         // }
         stage('installation') {
             steps {
-                snInstallApp(baseAppAutoUpgrade: false)
+                snInstallApp(
+                    url: "https://chiarngqdemoclient.service-now.com",
+                    credentialsId: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
+                    appScope: "x_fxi_afioristore2",
+                    appVersion: "4.3.9",
+                    baseAppAutoUpgrade: false)
             }
         }
         stage('revert-changes') {
             steps {
-                snRollbackApp()
+                snRollbackApp(
+                    url: "https://chiarngqdemoclient.service-now.com",
+                    credentialsId: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
+                    appScope: "x_fxi_afioristore2"
+                )
             }
         }
     }
