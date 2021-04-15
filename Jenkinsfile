@@ -34,6 +34,7 @@ pipeline {
                 snPublishApp(
                     url: "https://chiarngqdemoauthor.service-now.com",
                     credentialsId: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
+                    appScope: "x_fxi_afioristore2",
                     obtainVersionAutomatically: true)
 
                 echo "ServiceNow Parameters after publishing stage: ${params.snParam}"
