@@ -4,7 +4,7 @@
 pipeline {
     agent any
 
-    parameters {
+    parameters([
             snParam(
                 credentialsForPublishedApp: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
                 instanceForPublishedAppUrl: "https://chiarngqdemoauthor.service-now.com",
@@ -13,7 +13,7 @@ pipeline {
                 appScope: "x_fxi_afioristore2",
                 publishedAppVersion: '4.3.10'
             )
-    }
+    ])
 
     stages {
         stage('configuration') {
