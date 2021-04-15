@@ -1,4 +1,5 @@
 // Sample script for /sn_cicd/app_repo/install for app customization feature
+// without ServiceNow Parameters (snParams).
 
 pipeline {
     agent any
