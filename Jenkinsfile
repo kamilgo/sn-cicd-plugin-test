@@ -21,6 +21,7 @@ pipeline {
         stage('configuration') {
             steps {
                 echo "Test param: ${params.myParam}"
+                
                 echo "ServiceNow Parameters: ${params.snParam}"
             }
         }
