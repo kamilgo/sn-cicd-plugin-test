@@ -30,7 +30,7 @@ pipeline {
              steps {
                  snBatchInstall(
                      url: 'https://chiarngqdemoclient.service-now.com'
-                    ,credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217'
+                    //,credentialsId: 'f15c53d0-25d0-41ab-adce-3f60e6bc9217'
                     ,useFile: true
                     ,file: "${env.WORKSPACE}/now_batch_manifest.json"
                     )
