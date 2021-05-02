@@ -4,7 +4,7 @@ pipeline {
     snParam(credentialsForPublishedApp: "88dbbe69-0e00-4dd5-838b-2fbd8dfedeb4", instanceForPublishedAppUrl: "https://cicdjenkinsapppublish.service-now.com", sysId: "a5116141d0835010f8770be4e4ff53b0")
   }
   environment {
-    BRANCH = "${BRANCH_NAME}"
+    BRANCH = "master"
     APPSYSID = 'a5116141d0835010f8770be4e4ff53b0'
     CREDENTIALS = '7b4ca59e-8486-486c-895e-f044a5297447'
     DEVENV = 'https://chiarngqdemoauthor.service-now.com'
