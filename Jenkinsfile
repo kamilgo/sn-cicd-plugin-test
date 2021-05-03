@@ -6,7 +6,7 @@ pipeline {
 
   environment {
     CREDENTIALS = 'f15c53d0-25d0-41ab-adce-3f60e6bc9217'
-    PRODENV = 'https://prodinstance.service-now.com'
+    PRODENV = 'https://chiarngqdemoauthor.service-now.com'
   }
 
   stages {
