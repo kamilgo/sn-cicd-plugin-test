@@ -6,7 +6,7 @@ pipeline {
 
   environment {
     CREDENTIALS = 'f15c53d0-25d0-41ab-adce-3f60e6bc9217'
-    PRODENV = 'https://chiarngqdemoauthor.service-now.com'
+    PRODENV = 'https://prodinstance.service-now.com'
   }
 
   stages {
@@ -40,7 +40,7 @@ pipeline {
             }
           ]
           ''',
-          notes: 'User specified additional notes'
+          notes: 'User specified additional notes')
       }
     }
   }
