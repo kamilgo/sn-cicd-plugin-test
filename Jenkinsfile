@@ -55,7 +55,7 @@ pipeline {
           credentialsId: "${CREDENTIALS}",
           scanType: 'scanWithSuiteOnUpdateSets',
           suiteSysId: 'fc8d84891b5fa050b54e85d5604bcb6f',
-          requestBody: '{update_set_sys_ids: ["0f4ccd0ddb9f10108552ff561d961923","3dfac1fddbf9a4d0f0eb52c8dc9619b2"]}'))
+          requestBody: '{update_set_sys_ids: ["0f4ccd0ddb9f10108552ff561d961923","3dfac1fddbf9a4d0f0eb52c8dc9619b2"]}')
       }
     }
   }
