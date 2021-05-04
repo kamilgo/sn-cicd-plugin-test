@@ -8,7 +8,7 @@ pipeline {
   environment {
     BRANCH = "master"
     APPSYSID = 'a5116141d0835010f8770be4e4ff53b0'
-    CREDENTIALS = '7b4ca59e-8486-486c-895e-f044a5297447'
+    CREDENTIALS = 'f15c53d0-25d0-41ab-adce-3f60e6bc9217'
     DEVENV = 'https://chiarngqdemoauthor.service-now.com'
     TESTENV = 'https://chiarngqdemoauthor.service-now.com'
     PRODENV = 'https://chiarngqdemoclient.service-now.com'
