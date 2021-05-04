@@ -1,7 +1,9 @@
 pipeline {
   agent any
   parameters {
-    snParam()
+    // ServiceNow Parameters should be created by selecting the option 'This build is parameterized' in job configuration.
+    // Otherwise it won't be possible to pass variables between publish -> install steps.
+    // snParam(...)
   }
   environment {
     BRANCH = "master"
