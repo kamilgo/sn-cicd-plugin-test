@@ -20,7 +20,7 @@ pipeline {
       steps {
         //snApplyChanges(appSysId: "${APPSYSID}", branchName: "${BRANCH}", url: "${DEVENV}", credentialsId: "${CREDENTIALS}")
         snPublishApp(credentialsId: "${CREDENTIALS}", url: "${DEVENV}", appSysId: "${APPSYSID}",
-          isAppCustomization: true, obtainVersionAutomatically: false, appVersion: "4.3.25")
+          isAppCustomization: true, obtainVersionAutomatically: true, incrementBy: 2)
       }
     }
     stage('Install') {
