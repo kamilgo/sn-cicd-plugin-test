@@ -13,7 +13,7 @@ pipeline {
                 instanceForPublishedAppUrl: "https://chiarngqdemoauthor.service-now.com",
                 credentialsForInstalledApp:"f15c53d0-25d0-41ab-adce-3f60e6bc9217",
                 instanceForInstalledAppUrl:"https://chiarngqdemoclient.service-now.com",
-                sysId:'713b4531db3da4d0f0eb52c8dc961908',
+                sysId:'a5116141d0835010f8770be4e4ff53b0',
                 appScope: "x_fxi_afioristore2",
                 //publishedAppVersion: '4.3.10',
                 rollbackAppVersion: '',
