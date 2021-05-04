@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters {
-    snParam(credentialsForPublishedApp: "88dbbe69-0e00-4dd5-838b-2fbd8dfedeb4", instanceForPublishedAppUrl: "https://cicdjenkinsapppublish.service-now.com", sysId: "a5116141d0835010f8770be4e4ff53b0")
+    snParam()
   }
   environment {
     BRANCH = "master"
@@ -18,7 +18,7 @@ pipeline {
       steps {
         //snApplyChanges(appSysId: "${APPSYSID}", branchName: "${BRANCH}", url: "${DEVENV}", credentialsId: "${CREDENTIALS}")
         snPublishApp(credentialsId: "${CREDENTIALS}", url: "${DEVENV}", appSysId: "${APPSYSID}",
-          isAppCustomization: true, obtainVersionAutomatically: true, incrementBy: 2)
+          isAppCustomization: true, obtainVersionAutomatically: false, appVersion: "4.3.25")
       }
     }
     stage('Install') {
