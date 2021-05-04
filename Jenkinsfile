@@ -4,9 +4,8 @@
 pipeline {
     agent any
 
+ // Required only if we want to initialize ServiceNow Parameters. First build will always fail.
     parameters {
-            string(name: "myParam", defaultValue: 'test')
-
             snParam(
                 description: "ServiceNow Parameters",
                 credentialsForPublishedApp: "f15c53d0-25d0-41ab-adce-3f60e6bc9217",
