@@ -5,6 +5,7 @@ pipeline {
     agent any
 
  // Required only if we want to initialize ServiceNow Parameters. First build will always fail.
+ // Works with 'Trigger builds remotely': http://[JENKINS_HOST]/job/[JOB_NAME]/buildWithParameters?token=[TOKEN]
     parameters {
             snParam(
                 description: "ServiceNow Parameters",
